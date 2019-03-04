@@ -16,6 +16,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var p2Button: UIButton!
   @IBOutlet weak var p1ErrorLabel: UILabel!
   @IBOutlet weak var p2ErrorLabel: UILabel!
+  @IBOutlet weak var winnerLabel: UILabel!
   
   let imageNames = ["paper", "rock", "scissors"]
   
@@ -34,8 +35,13 @@ class ViewController: UIViewController {
       
       if(p1Count == 1){
         p1ErrorLabel.text = "Please wait for Player 2!"
+        p1Button.isEnabled = false
+        determineWinner()
       }
     }
+    p2Count = 0;
+    p2Button.isEnabled = true;
+    p2ErrorLabel.text = ""
   }
 
   @IBAction func P2Button(_ sender: Any) {
@@ -47,9 +53,41 @@ class ViewController: UIViewController {
       
       if(p2Count == 1){
         p2ErrorLabel.text = "Please wait for Player 1!"
+        p2Button.isEnabled = false
+        determineWinner()
+      }
+    }
+    p1Count = 0;
+    p1Button.isEnabled = true;
+    p1ErrorLabel.text = ""
+  }
+  
+  func determineWinner() {
+    if(p1Count == 1 && p2Count == 1){
+      if(randomImageName1 == "rock" && randomImageName2 == "scissors"){
+        winnerLabel.text = "Player1 wins!"
+      }
+      else if(randomImageName1 == "scissors" && randomImageName2 == "paper"){
+        winnerLabel.text = "Player1 wins!"
+      }
+      else if(randomImageName1 == "paper" && randomImageName2 == "rock"){
+        winnerLabel.text = "Player1 wins!"
+      }
+      else if(randomImageName2 == "rock" && randomImageName1 == "scissors"){
+        winnerLabel.text = "Player2 wins!"
+      }
+      else if(randomImageName2 == "scissors" && randomImageName1 == "paper"){
+        winnerLabel.text = "Player2 wins!"
+      }
+      else if(randomImageName2 == "paper" && randomImageName1 == "rock"){
+        winnerLabel.text = "Player2 wins!"
+      }
+      else{
+        winnerLabel.text = ""
       }
     }
   }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.

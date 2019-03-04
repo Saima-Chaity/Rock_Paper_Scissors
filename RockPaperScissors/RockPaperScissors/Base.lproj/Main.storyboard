@@ -80,12 +80,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="WinnerLabel" destination="NoF-10-l0f" id="jbu-hK-RyP"/>
                         <outlet property="imageView1" destination="9vu-Sh-Zmo" id="j59-fO-9W7"/>
                         <outlet property="imageView2" destination="c1N-hu-v02" id="Pz5-8X-kkk"/>
                         <outlet property="p1Button" destination="Tnh-Ob-cK1" id="fyc-ho-F9k"/>
                         <outlet property="p1ErrorLabel" destination="Wlx-ML-fCT" id="E7g-e6-sje"/>
                         <outlet property="p2Button" destination="wLi-bE-eq1" id="dm2-lY-U8K"/>
                         <outlet property="p2ErrorLabel" destination="8Jb-ue-K6d" id="gDi-vz-SQP"/>
+                        <outlet property="winnerLabel" destination="NoF-10-l0f" id="UVW-LH-3EG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
