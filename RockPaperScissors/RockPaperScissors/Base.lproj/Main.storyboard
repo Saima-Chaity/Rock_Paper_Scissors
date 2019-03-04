@@ -41,6 +41,9 @@
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.1134417808219178" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="18"/>
                                 <state key="normal" title="Player2 GO"/>
+                                <connections>
+                                    <action selector="P2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XgL-j6-wDt"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="9vu-Sh-Zmo">
                                 <rect key="frame" x="137" y="173" width="100" height="100"/>
@@ -78,8 +81,11 @@
                     </view>
                     <connections>
                         <outlet property="imageView1" destination="9vu-Sh-Zmo" id="j59-fO-9W7"/>
+                        <outlet property="imageView2" destination="c1N-hu-v02" id="Pz5-8X-kkk"/>
                         <outlet property="p1Button" destination="Tnh-Ob-cK1" id="fyc-ho-F9k"/>
                         <outlet property="p1ErrorLabel" destination="Wlx-ML-fCT" id="E7g-e6-sje"/>
+                        <outlet property="p2Button" destination="wLi-bE-eq1" id="dm2-lY-U8K"/>
+                        <outlet property="p2ErrorLabel" destination="8Jb-ue-K6d" id="gDi-vz-SQP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
