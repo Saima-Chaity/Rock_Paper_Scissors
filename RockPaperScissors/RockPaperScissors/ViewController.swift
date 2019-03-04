@@ -66,26 +66,41 @@ class ViewController: UIViewController {
     if(p1Count == 1 && p2Count == 1){
       if(randomImageName1 == "rock" && randomImageName2 == "scissors"){
         winnerLabel.text = "Player1 wins!"
+        replay()
       }
       else if(randomImageName1 == "scissors" && randomImageName2 == "paper"){
         winnerLabel.text = "Player1 wins!"
+        replay()
       }
       else if(randomImageName1 == "paper" && randomImageName2 == "rock"){
         winnerLabel.text = "Player1 wins!"
+        replay()
       }
       else if(randomImageName2 == "rock" && randomImageName1 == "scissors"){
         winnerLabel.text = "Player2 wins!"
+        replay()
       }
       else if(randomImageName2 == "scissors" && randomImageName1 == "paper"){
         winnerLabel.text = "Player2 wins!"
+        replay()
       }
       else if(randomImageName2 == "paper" && randomImageName1 == "rock"){
         winnerLabel.text = "Player2 wins!"
+        replay()
       }
       else{
         winnerLabel.text = ""
       }
     }
+  }
+  
+  func replay(){
+    p1Count = 0;
+    p1Button.isEnabled = true;
+    p1ErrorLabel.text = ""
+    p2Count = 0;
+    p2Button.isEnabled = true;
+    p2ErrorLabel.text = ""
   }
   
   override func viewDidLoad() {
